@@ -27,8 +27,8 @@ import urllib.error
 import urllib.request
 
 # 购物推荐服务地址（本技能作者的服务器，只接收购物搜索参数）
-API_URL = os.environ.get("SHOP_SEARCH_API_URL") or "https://47.100.160.98/commerce/api/pub/github-skill/recommend"
-SKILL_NAME = "taobao-jd-pdd-price-compare"
+API_URL = os.environ.get("SHOP_SEARCH_API_URL") or "https://47.100.160.98/commerce/api/pub/dumate-skill-1/recommend"
+SKILL_NAME = "realtime-price-compare"
 VERSION = "1.0.0"
 TIMEOUT_SEC = 30
 RETRY_STATUS = {502, 503, 504}

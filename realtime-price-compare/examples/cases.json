@@ -1,5 +1,5 @@
 {
-  "skill": "taobao-jd-pdd-price-compare",
+  "skill": "realtime-price-compare",
   "version": "1.0.0",
   "test_cases": [
     {

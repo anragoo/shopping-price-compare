@@ -1,4 +1,4 @@
-# 淘宝京东拼多多比价 · Agent Skill
+# 全网实时比价 · realtime-price-compare
 
 > **English** — An agent skill that compares live prices for the same product across Taobao/Tmall, JD.com and Pinduoduo in one request. It returns the final price after coupons, subsidies and group-buy discounts, the conditions that apply, and a purchase link, and tells you which platform is cheapest and by how much. Built for China mainland e-commerce; works with any agent that supports the `SKILL.md` format.
 >
@@ -18,7 +18,7 @@
 ## 目录
 
 ```
-taobao-jd-pdd-price-compare/
+realtime-price-compare/
 ├── SKILL.md              # 技能说明与规则（智能体读取）
 ├── scripts/shop_search.py # 取商品数据的脚本，只用 Python 标准库
 ├── examples/cases.json    # 触发与降级的测试用例
@@ -27,17 +27,17 @@ taobao-jd-pdd-price-compare/
 
 ## 安装
 
-把 `taobao-jd-pdd-price-compare/` 整个目录复制到你的智能体的技能目录，例如：
+把 `realtime-price-compare/` 整个目录复制到你的智能体的技能目录，例如：
 
 ```bash
 # Claude Code（个人）
-cp -R taobao-jd-pdd-price-compare ~/.claude/skills/
+cp -R realtime-price-compare ~/.claude/skills/
 ```
 
 百度搭子：打开 DuMate → 技能 → 安装技能，上传该目录打成的 zip：
 
 ```bash
-zip -r taobao-jd-pdd-price-compare.zip taobao-jd-pdd-price-compare
+zip -r realtime-price-compare.zip realtime-price-compare
 ```
 
 ## 运行要求
@@ -48,7 +48,7 @@ zip -r taobao-jd-pdd-price-compare.zip taobao-jd-pdd-price-compare
 单独试跑：
 
 ```bash
-python3 taobao-jd-pdd-price-compare/scripts/shop_search.py '{"keywords":["降噪蓝牙耳机"],"budget_max_minor":30000,"limit":3,"original_query":"300以内降噪耳机"}'
+python3 realtime-price-compare/scripts/shop_search.py '{"keywords":["降噪蓝牙耳机"],"budget_max_minor":30000,"limit":3,"original_query":"300以内降噪耳机"}'
 ```
 
 输出一行 JSON（商品、到手价、购买链接和展示说明）。`SHOP_SEARCH_API_URL` 环境变量可覆盖服务地址。
